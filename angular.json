@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TP2020Parcial1Lab4"
+    }
+  },
+  "defaultProject": "TP2020Parcial1Lab4",
+  "cli": {
+    "analytics": "8864d0a2-4bb3-4c59-97e1-c91c9d70651c"
+  }
 }

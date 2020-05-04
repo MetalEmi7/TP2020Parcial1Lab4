@@ -12,6 +12,7 @@ import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 //import { GameComponent } from './pages/game/game.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { HomeComponent } from './pages/home/home.component';
+import { MenuComponent } from './pages/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './pages/home/home.component';
     QuienSoyComponent,
     //GameComponent,
     UsuarioComponent,
-    HomeComponent
+    HomeComponent,
+    MenuComponent
   ],
   imports: [
     HttpClientModule,

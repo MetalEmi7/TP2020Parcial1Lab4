@@ -22,9 +22,4 @@ export class HomeComponent implements OnInit {
       
     });
   }
-
-
-  EMI(){
-    this.ListadoEJ.push(this.GET());
-  }
 }

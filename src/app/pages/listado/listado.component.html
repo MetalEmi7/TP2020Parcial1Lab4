@@ -1,1 +1,12 @@
-<p>listado works!</p>
+<br>
+<button class="btn btn-info" (click)="GET()"> Obtener ejemplo de usuarios </button>
+<br>
+
+<div *ngFor="let item of ListadoEJ">
+    <div class="col-md-4">
+        <div class="alert alert-primary">
+            <img [src]="item.picture.thumbnail" alt="">
+            {{item.name.first}} {{item.name.last}}
+        </div>
+    </div>
+</div>

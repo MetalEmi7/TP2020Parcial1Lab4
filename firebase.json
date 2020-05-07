@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "TP2020Parcial1Lab4",
+      "public": "dist/TP2020Parcial1Lab4",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

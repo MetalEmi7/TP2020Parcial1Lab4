@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tp2020parcial1lab4": {
+      "hosting": {
+        "TP2020Parcial1Lab4": [
+          "tp2020parcial1lab4"
+        ]
+      }
+    }
+  }
+}

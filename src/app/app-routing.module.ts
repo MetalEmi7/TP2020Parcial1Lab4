@@ -5,17 +5,20 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { pathToFileURL } from 'url';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
+import { LoginComponent } from './pages/login/login.component';
+import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
 
 const routes: Routes = [
   {
     path: "", component: HomeComponent,
     children: [
-      { path: "Login", component: ListadoComponent },
-      { path: "CrearUsuario", component: ListadoComponent },
+      { path: "Login", component: LoginComponent },
+      { path: "CrearUsuario", component: CrearUsuarioComponent },
       { path: "Listado", component: ListadoComponent },
       { path: "QuienSoy", component: QuienSoyComponent }
       
-    ]},
+    ]
+  }
     //{path: "**", component: component: ErrorComponent},
 
 ];

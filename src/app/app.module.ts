@@ -13,6 +13,7 @@ import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
+import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { MenuComponent } from './pages/menu/menu.component';
     //GameComponent,
     UsuarioComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    CrearUsuarioComponent
   ],
   imports: [
     HttpClientModule,

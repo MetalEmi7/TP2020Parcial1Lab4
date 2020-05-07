@@ -117,6 +117,10 @@
               "devServerTarget": "TP2020Parcial1Lab4:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

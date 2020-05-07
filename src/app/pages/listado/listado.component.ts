@@ -11,7 +11,9 @@ export class ListadoComponent implements OnInit {
 
   constructor(protected MyHttp: UsuarioService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.GET()
+  }
 
   public GET(){
     this.MyHttp.getUsers()

@@ -12,10 +12,11 @@ const routes: Routes = [
   {
     path: "", component: HomeComponent,
     children: [
-      { path: "Login", component: LoginComponent },
+      { path: "QuienSoy", component: QuienSoyComponent },
       { path: "CrearUsuario", component: CrearUsuarioComponent },
-      { path: "Listado", component: ListadoComponent },
-      { path: "QuienSoy", component: QuienSoyComponent }
+      { path: "Login", component: LoginComponent },      
+      { path: "Listado", component: ListadoComponent }
+      
       
     ]
   }

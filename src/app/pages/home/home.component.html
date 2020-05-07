@@ -1,18 +1,3 @@
-<div style="background-color: cornflowerblue;">
-    
-    MENUSTRIP
+<app-menu></app-menu>
 
-</div>
-
-<input class="btn btn-primary" type="button" value="Click aca" (click)="GET()">
-
-<div *ngFor="let item of ListadoEJ">
-    --
-    <img [src]="item.picture.thumbnail">
-
-    {{item.name.title}}
-    {{item.name.first}}
-    {{item.name.last}}
-    
-    --
-</div>
+<router-outlet></router-outlet>

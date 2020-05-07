@@ -4,24 +4,19 @@ import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { pathToFileURL } from 'url';
 import { ListadoComponent } from './pages/listado/listado.component';
+import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 
 const routes: Routes = [
-  //Rutas
   {
-    path: "", component: MenuComponent,
+    path: "", component: HomeComponent,
     children: [
+      { path: "Login", component: ListadoComponent },
+      { path: "CrearUsuario", component: ListadoComponent },
       { path: "Listado", component: ListadoComponent },
+      { path: "QuienSoy", component: QuienSoyComponent }
       
-    ]
-  },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent },
-  { path: "", component: HomeComponent }
+    ]},
+    //{path: "**", component: component: ErrorComponent},
 
 ];
 

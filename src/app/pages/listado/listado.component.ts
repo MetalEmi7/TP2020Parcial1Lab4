@@ -12,7 +12,7 @@ export class ListadoComponent implements OnInit {
   constructor(protected MyHttp: UsuarioService) { }
 
   ngOnInit(): void {
-    this.GET()
+    this.GET();
   }
 
   public GET(){

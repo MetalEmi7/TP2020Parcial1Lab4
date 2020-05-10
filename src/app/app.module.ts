@@ -14,6 +14,7 @@ import { UsuarioComponent } from './componentes/usuario/usuario.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
+import { AngularFireAuth } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,9 @@ import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.compo
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AngularFireAuth
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

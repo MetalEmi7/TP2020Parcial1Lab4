@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from "@angular/fire/auth";
+
 
 @Component({
   selector: 'app-crear-usuario',
@@ -11,7 +13,17 @@ export class CrearUsuarioComponent implements OnInit {
   correo: string;
 
 
-  constructor() { }
+  constructor(public auth: AngularFireAuth) {
+  }
+
+  // login() {
+  //   this.auth.signInWithPopup(new auth.GoogleAuthProvider());
+  // }
+  
+  logout() {
+    this.auth.signOut();
+  }
+  
 
   ngOnInit(): void {
   }

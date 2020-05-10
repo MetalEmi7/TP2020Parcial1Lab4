@@ -15,6 +15,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { MenuComponent } from './pages/menu/menu.component';
 import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { AngularFireAuth } from '@angular/fire/auth';
     HttpClientModule,
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [
     AngularFireAuth

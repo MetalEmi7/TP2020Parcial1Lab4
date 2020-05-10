@@ -5,12 +5,15 @@
 export const environment = {
   production: false,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: "AIzaSyCHDKcMoz_RCHUyK3Ep4bWw5QfrYTlnxMs",
+    authDomain: "tp2020parcial1lab4.firebaseapp.com",
+    databaseURL: "https://tp2020parcial1lab4.firebaseio.com",
+    projectId: "tp2020parcial1lab4",
+    storageBucket: "tp2020parcial1lab4.appspot.com",
+    messagingSenderId: "542265277739",
+    appId: "1:542265277739:web:bbff448bcb90070888996e",
+    measurementId: "G-QF1372D3CP"
+  
   }
 };
 

@@ -9,7 +9,7 @@ import { auth } from "firebase/app";
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: string;
+  email: string;
   pass: String;
 
   constructor(public MyAuth: AngularFireAuth)

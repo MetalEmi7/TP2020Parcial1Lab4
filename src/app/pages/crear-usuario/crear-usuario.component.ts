@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/auth";
+import { empty } from 'rxjs';
 
 
 @Component({
@@ -8,29 +9,49 @@ import { AngularFireAuth } from "@angular/fire/auth";
   styleUrls: ['./crear-usuario.component.css']
 })
 export class CrearUsuarioComponent implements OnInit {
-  user: string;
-  pass: String;
-  correo: string;
+  email: string;
+  pass: string;
 
 
-  constructor(public auth: AngularFireAuth) {
-  }
-
-  // login() {
-  //   this.auth.signInWithPopup(new auth.GoogleAuthProvider());
-  // }
+  constructor(public auth: AngularFireAuth) {  }
   
+
+public ingresar()
+{
+
+ if (this.email == "" || this.pass == "") {
+   alert("Error: Ingrese datos");
+   return;
+ }
+
+
+  this.auth.createUserWithEmailAndPassword(this.email, this.pass)
+  .then(data => {
+    console.log(data);
+  })
+  .catch(e => {
+    console.log(e);
+  });
+}
+
+
+
+
   logout() {
     this.auth.signOut();
   }
   
 
+
+
   ngOnInit(): void {
   }
 
+
+
   Crear()
   {
-    console.log(this.pass + " - " + this.user + " - "+ this.correo);
+    
   }
 
 }

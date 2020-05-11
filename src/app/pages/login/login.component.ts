@@ -10,7 +10,7 @@ import { auth } from "firebase/app";
 })
 export class LoginComponent implements OnInit {
   email: string;
-  pass: String;
+  pass: string;
 
   constructor(public MyAuth: AngularFireAuth)
   {
@@ -22,7 +22,14 @@ export class LoginComponent implements OnInit {
 
   Login()
   {
-    this.MyAuth.signInWithPopup(new auth.GoogleAuthProvider());
+    this.MyAuth.signInWithEmailAndPassword(this.email, this.pass)
+    .then(data =>{
+      console.log(data);
+    })
+    .catch(e => {
+      console.log(e);
+    })
+//    this.MyAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 
 }

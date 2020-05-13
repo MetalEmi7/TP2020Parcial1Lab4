@@ -7,6 +7,8 @@ import { ListadoComponent } from './pages/listado/listado.component';
 import { QuienSoyComponent } from './pages/quien-soy/quien-soy.component';
 import { LoginComponent } from './pages/login/login.component';
 import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
+import { MostrarComponent } from './pages/mostrar/mostrar.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -15,9 +17,11 @@ const routes: Routes = [
       { path: "QuienSoy", component: QuienSoyComponent },
       { path: "CrearUsuario", component: CrearUsuarioComponent },
       { path: "Login", component: LoginComponent },      
-      { path: "Listado", component: ListadoComponent }
-      
-      
+      { path: "Listado", component: ListadoComponent, canActivate: [AuthGuard],
+      children: [
+          {path: "Mostrar", component: MostrarComponent}
+        ]
+      }
     ]
   }
     //{path: "**", component: component: ErrorComponent},

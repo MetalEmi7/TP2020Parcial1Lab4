@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\listado"
   ],
+  "SelectedNode": "\\src\\app\\pages\\listado\\listado.component.css",
   "PreviewInSolutionExplorer": false
 }

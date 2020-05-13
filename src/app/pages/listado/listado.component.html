@@ -1,31 +1,12 @@
 <br>
-  <!--<div class="row">
-    <div *ngFor="let item of ListadoEJ">
-      <div class="card-deck">
-        <div class="card" style="width: 18rem; ">
-          <img [src]="item.picture.medium" class="card-img-top" alt="Foto">
-
-          <div class="card-body">
-            <h5 class="card-title">{{item.name.first}} {{item.name.last}}</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>-->
 <div class="container">
   <div class="row row-cols-1 row-cols-md-4">
 
     <div *ngFor="let item of ListadoEJ">
       <div class="col mb-4">
-        <div class="card">
+        <div class="card text-white bg-primary mb-3">
 
-
+          
 
           <img [src]="item.picture.large" class="card-img-top" alt="Foto">
 
@@ -35,8 +16,9 @@
           </div>
 
           <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <a href="#" class="btn btn-light">Ver detalle</a>
+            <a style="margin-left:10px"> </a>
+            <a href="#" class="btn btn-warning">+</a>
           </div>
 
 

@@ -1,11 +1,12 @@
-<nav class="navbar navbar-expand-sm navbar-light bg-dark">
-    
-    <a class="nav-link" routerLink="/QuienSoy" RouterLinkActive="active">Quien Soy</a>
-    <a class="nav-link" routerLink="/CrearUsuario" RouterLinkActive="active">Alta Usuario</a>
-    <a class="nav-link" routerLink="/Login" RouterLinkActive="active">Login</a>
-    <a class="nav-link" routerLink="/Listado" RouterLinkActive="active">Listado</a>
-    
+<nav class="navbar navbar-expand-sm navbar-nav-scroll bg-light" >
+  <a class="navbar-brand">
+    <img src="https://pbs.twimg.com/profile_images/703157898692571136/him8Nhr0_400x400.jpg" width="30" height="30">
+    {{user}}
+  </a>
 
-    <!-- Navbar content -->
+  <a class="nav-link text-uppercase" routerLink="/CrearUsuario" RouterLinkActive="active">Alta Usuario</a>
+  <a class="nav-link text-uppercase" routerLink="/Login" RouterLinkActive="active">Login</a>
+  <a class="nav-link text-uppercase" routerLink="/Listado" RouterLinkActive="active">Listado</a>
+  <a class="nav-link text-uppercase" routerLink="/QuienSoy" RouterLinkActive="active">Quien Soy</a>
+
 </nav>
-  

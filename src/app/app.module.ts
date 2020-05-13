@@ -17,6 +17,7 @@ import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.compo
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
+import { MostrarComponent } from './pages/mostrar/mostrar.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { environment } from 'src/environments/environment';
     UsuarioComponent,
     HomeComponent,
     MenuComponent,
-    CrearUsuarioComponent
+    CrearUsuarioComponent,
+    MostrarComponent
   ],
   imports: [
     HttpClientModule,

@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   email: string;
   pass: string;
 
-  constructor(public MyAuth: AngularFireAuth)
+  constructor(public MyAuth: AngularFireAuth )
   {
 
   }
@@ -25,10 +25,25 @@ export class LoginComponent implements OnInit {
     this.MyAuth.signInWithEmailAndPassword(this.email, this.pass)
     .then(data =>{
       console.log(data);
+      
+
+      localStorage.setItem("MyToken", data.user.toJSON().stsTokenManager.accessToken);
+
+
+    
+
+
+
+
     })
     .catch(e => {
       console.log(e);
     })
+
+    
+
+   
+
 //    this.MyAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }
 

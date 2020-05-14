@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-menu',
@@ -7,14 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
   user:string;
+  obj: any;
 
-  constructor() { }
+  constructor(private MyJwtHelper: JwtHelperService) { }
 
   ngOnInit(): void {
-    debugger;
-    localStorage.getItem("MyToken");
-
+    debugger;   
     
+    this.obj = this.MyJwtHelper.decodeToken(localStorage.getItem("MyToken"));
+    debugger;
   }
 
 }

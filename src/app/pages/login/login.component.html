@@ -1,18 +1,19 @@
-<div class="">
-  <div class="col-md-4">
-    <br>
-    <label>Nombre</label>
-    <input [(ngModel)]="email" class="form-control" type="text" placeholder="Ingrese su nombre">
-  </div>
+  <br>
 
-  <div class="col-md-4">
-    <label>Contraseña</label>
-    <input [(ngModel)]="pass" class="form-control" type="password" placeholder="Ingrese contraseña">
+  <div class="alert alert-light col-md-4">
+      <div class="col-md">
+        <label>Nombre</label>
+        <input [(ngModel)]="email" class="form-control" type="text" placeholder="Ingrese su nombre">
+      </div>
+    
+      <div class="col-md">
+        <label>Contraseña</label>
+        <input [(ngModel)]="pass" class="form-control" type="password" placeholder="Ingrese contraseña">
+      </div>
+    
+      <div class="col-md">
+        <br>
+        <input class="btn btn-primary mr-sm-2" type="button" value="Conectarse" (click)="Login()">
+        <input class="btn btn-danger mr-sm-2" type="reset" value="Cancelar" >
+      </div>
   </div>
-
-  <div class="col-md-4">
-    <br>
-    <input class="btn btn-primary mr-sm-2" type="button" value="Conectarse" (click)="Login()">
-    <input class="btn btn-danger mr-sm-2" type="button" value="Cancelar" >
-  </div>
-</div>

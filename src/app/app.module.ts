@@ -18,6 +18,11 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { MostrarComponent } from './pages/mostrar/mostrar.component';
+import { JwtModule } from '@auth0/angular-jwt';
+
+export function MyTokenGetter() {
+  return localStorage.getItem("MyToken");
+}
 
 @NgModule({
   declarations: [
@@ -36,6 +41,11 @@ import { MostrarComponent } from './pages/mostrar/mostrar.component';
     HttpClientModule,
     BrowserModule,
     FormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: MyTokenGetter
+      }
+    }),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],

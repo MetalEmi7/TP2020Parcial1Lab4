@@ -21,6 +21,7 @@ export class ListadoComponent implements OnInit {
 
       console.log(data["results"]);
       this.ListadoEJ = data["results"];
+      debugger;
       
     });
   }

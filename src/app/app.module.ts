@@ -19,6 +19,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { MostrarComponent } from './pages/mostrar/mostrar.component';
 import { JwtModule } from '@auth0/angular-jwt';
+import { VerFavoritosComponent } from './pages/ver-favoritos/ver-favoritos.component';
 
 export function MyTokenGetter() {
   return localStorage.getItem("MyToken");
@@ -35,7 +36,8 @@ export function MyTokenGetter() {
     HomeComponent,
     MenuComponent,
     CrearUsuarioComponent,
-    MostrarComponent
+    MostrarComponent,
+    VerFavoritosComponent
   ],
   imports: [
     HttpClientModule,

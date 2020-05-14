@@ -9,6 +9,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { CrearUsuarioComponent } from './pages/crear-usuario/crear-usuario.component';
 import { MostrarComponent } from './pages/mostrar/mostrar.component';
 import { AuthGuard } from './guards/auth.guard';
+import { VerFavoritosComponent } from './pages/ver-favoritos/ver-favoritos.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
       children: [
           {path: "Mostrar", component: MostrarComponent}
         ]
+      },
+      { path: "Favoritos", component: VerFavoritosComponent, canActivate: [AuthGuard]
+  
       }
     ]
   }

@@ -7,22 +7,35 @@ import { UsuarioService } from 'src/app/servicios/usuario.service';
   styleUrls: ['./listado.component.css']
 })
 export class ListadoComponent implements OnInit {
-  ListadoEJ: any[] = [];
+  ListadoPersonas: any[] = [];
+  ListadoFavoritos: any[] = [];
 
   constructor(protected MyHttp: UsuarioService) { }
 
   ngOnInit(): void {
     this.GET();
+    this.ListadoFavoritos = JSON.parse(localStorage.getItem("ListadoFavoritos"))
   }
 
   public GET(){
     this.MyHttp.getUsers()
     .subscribe((data) => {
-
       console.log(data["results"]);
-      this.ListadoEJ = data["results"];
-      debugger;
-      
+      this.ListadoPersonas = data["results"];      
     });
+  }
+
+  AgregarFavorito(persona){
+    this.ListadoFavoritos.push(persona);
+
+    localStorage.removeItem("ListadoFavoritos")
+
+    debugger;
+
+    var emi = JSON.stringify(this.ListadoFavoritos);
+
+    localStorage.setItem("ListadoFavoritos", emi);
+
+
   }
 }

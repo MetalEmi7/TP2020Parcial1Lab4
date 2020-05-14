@@ -2,9 +2,9 @@
 <div class="container">
   <div class="row row-cols-1 row-cols-md-4">
 
-    <div *ngFor="let item of ListadoPersonas">
+    <div *ngFor="let item of ListadoFavoritos">
       <div class="col mb-4">
-        <div class="card text-white bg-primary mb-3">
+        <div class="card text-white bg-success mb-3">
 
           
 
@@ -19,12 +19,6 @@
           
           
           
-          </div>
-
-          <div class="card-body">
-            <a href="#" class="btn btn-light">Ver detalle</a>
-            <a style="margin-left:10px"> </a>
-            <a class="btn btn-warning" (click)="AgregarFavorito(item)">+</a>
           </div>
 
 

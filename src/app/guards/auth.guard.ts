@@ -16,6 +16,7 @@ export class AuthGuard implements CanActivate {
       if (localStorage.getItem("MyToken")) {
         return true;
       } else {       
+        alert("acceso denegado: debe loguearse primero")
         this.router.navigateByUrl("Login");
         return false;
       }

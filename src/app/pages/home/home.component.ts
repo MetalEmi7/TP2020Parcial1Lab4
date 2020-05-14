@@ -16,10 +16,7 @@ export class HomeComponent implements OnInit {
   public GET(){
     this.MyHttp.getUsers()
     .subscribe((data) => {
-
-      console.log(data["results"]);
-      this.ListadoEJ = data["results"];
-      
+      this.ListadoEJ = data["results"];      
     });
   }
 }

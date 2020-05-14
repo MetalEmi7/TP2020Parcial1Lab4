@@ -28,13 +28,9 @@ public crear()
 
   this.auth.createUserWithEmailAndPassword(this.email, this.pass)
   .then(data => {
-
-    console.log(data);
-
     data.user.updateProfile({
       displayName: this.nombre,      
     }).then(function() {
-      debugger;
       var displayName = data.user.displayName;
     }, function(error) {
     });
@@ -42,7 +38,6 @@ public crear()
 
   })
   .catch(e => {
-    console.log(e);
   });
 
 

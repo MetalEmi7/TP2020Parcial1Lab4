@@ -20,25 +20,19 @@ export class ListadoComponent implements OnInit {
   public GET(){
     this.MyHttp.getUsers()
     .subscribe((data) => {
-      console.log(data["results"]);
       this.ListadoPersonas = data["results"];      
     });
   }
 
   AgregarFavorito(persona){
-
     if ( this.ListadoFavoritos == null) {
       this.ListadoFavoritos = [];
     }
-
+    
     this.ListadoFavoritos.push(persona);
     localStorage.removeItem("ListadoFavoritos")
-    debugger;
-
-
-    var emi = JSON.stringify(this.ListadoFavoritos);
-    localStorage.setItem("ListadoFavoritos", emi);
-
+    var AuxLista = JSON.stringify(this.ListadoFavoritos);
+    localStorage.setItem("ListadoFavoritos", AuxLista);
 
   }
 }

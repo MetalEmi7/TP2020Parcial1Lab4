@@ -35,7 +35,6 @@ export class LoginComponent implements OnInit {
       localStorage.removeItem("ListadoFavoritos")
     })
     .catch(e => {
-      console.log(e);
     })
   }
 }

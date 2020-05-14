@@ -12,11 +12,9 @@ export class MenuComponent implements OnInit {
 
   constructor(private MyJwtHelper: JwtHelperService) { }
 
-  ngOnInit(): void {
-    debugger;   
-    
+  ngOnInit(): void {    
     this.obj = this.MyJwtHelper.decodeToken(localStorage.getItem("MyToken"));
-    debugger;
+    this.user = this.obj.email;
   }
 
 }

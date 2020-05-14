@@ -26,14 +26,17 @@ export class ListadoComponent implements OnInit {
   }
 
   AgregarFavorito(persona){
+
+    if ( this.ListadoFavoritos == null) {
+      this.ListadoFavoritos = [];
+    }
+
     this.ListadoFavoritos.push(persona);
-
     localStorage.removeItem("ListadoFavoritos")
-
     debugger;
 
-    var emi = JSON.stringify(this.ListadoFavoritos);
 
+    var emi = JSON.stringify(this.ListadoFavoritos);
     localStorage.setItem("ListadoFavoritos", emi);
 
 

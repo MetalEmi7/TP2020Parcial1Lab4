@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("MyToken", tokenData);
       })
 
-      this.router.navigateByUrl("Listado");
+      this.router.navigateByUrl("");
+      localStorage.removeItem("ListadoFavoritos")
     })
     .catch(e => {
       console.log(e);

@@ -14,4 +14,6 @@ export class VerFavoritosComponent implements OnInit {
     this.ListadoFavoritos = JSON.parse(localStorage.getItem("ListadoFavoritos"))
   }
 
+ 
+
 }

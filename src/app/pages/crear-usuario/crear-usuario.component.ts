@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { empty } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class CrearUsuarioComponent implements OnInit {
   nombre: string;
 
 
-  constructor(public auth: AngularFireAuth) {  }
+  constructor(public auth: AngularFireAuth, private router: Router) {  }
   
 
 public crear()
@@ -27,7 +28,7 @@ public crear()
 
   this.auth.createUserWithEmailAndPassword(this.email, this.pass)
   .then(data => {
-    debugger;
+
     console.log(data);
 
     data.user.updateProfile({
@@ -37,12 +38,14 @@ public crear()
       var displayName = data.user.displayName;
     }, function(error) {
     });
-    debugger;
+    this.router.navigateByUrl("");
 
   })
   .catch(e => {
     console.log(e);
   });
+
+
 }
 
 

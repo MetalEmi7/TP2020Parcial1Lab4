@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from "@angular/fire/auth";
 import { auth } from "firebase/app";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
   email: string;
   pass: string;
 
-  constructor(public MyAuth: AngularFireAuth )
+  constructor(public MyAuth: AngularFireAuth, private router: Router )
   {
 
   }
@@ -24,27 +25,16 @@ export class LoginComponent implements OnInit {
   {
     this.MyAuth.signInWithEmailAndPassword(this.email, this.pass)
     .then(data =>{
-      console.log(data);
-      
 
-      localStorage.setItem("MyToken", data.user.toJSON().stsTokenManager.accessToken);
+      data.user.getIdToken(false)
+      .then(tokenData => {
+        localStorage.setItem("MyToken", tokenData);
+      })
 
-
-    
-
-
-
-
+      this.router.navigateByUrl("Listado");
     })
     .catch(e => {
       console.log(e);
     })
-
-    
-
-   
-
-//    this.MyAuth.signInWithPopup(new auth.GoogleAuthProvider());
   }
-
 }
